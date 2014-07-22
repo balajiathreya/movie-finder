@@ -38,7 +38,7 @@ angular.module('feedModule', ['ngResource','ngSanitize'])
 			return feeds;
 		};
 	})
-	.controller('FeedController', function ($scope, FeedList) {
+	.controller('FeedController', function ($scope, FeedList, RTRatings) {
 		this.zipCode = '';
 		this.zipCodeSubmit = function(){
 			$scope.feeds = new FeedList(this.zipCode);
